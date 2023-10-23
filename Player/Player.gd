@@ -20,7 +20,7 @@ func _physics_process(delta):
 
 	# Handle Jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
-		$Sprite.animation = "Jump"
+		$Sprite.play("Jump") 
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
